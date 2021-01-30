@@ -4,16 +4,6 @@ import { Link } from "react-router-dom";
 
 export default function NavbarComponent() {
   return (
-    // <Navbar bg="light" expand="s">
-    //   <Navbar.Brand as={Link} to="/">
-    //     Home
-    //   </Navbar.Brand>
-    //   <Nav>
-    //     <Nav.Link as={Link} to="/user">
-    //       Profile
-    //     </Nav.Link>
-    //   </Nav>
-    // </Navbar>
     <>
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand as={Link} to="/">
@@ -22,7 +12,7 @@ export default function NavbarComponent() {
         <Nav className="mr-auto">
           <Nav.Link to="/">Home</Nav.Link>
           <Nav.Link to="/">Features</Nav.Link>
-          <Nav.Link to="/">Pricing</Nav.Link>
+          <Nav.Link to="/">About</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
