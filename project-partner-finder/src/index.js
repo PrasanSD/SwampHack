@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import LoadProjects from './pages/LoadProjects'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <LoadProjects />
     <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
