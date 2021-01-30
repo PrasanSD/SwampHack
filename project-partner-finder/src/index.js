@@ -2,29 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import LoadProjects from './pages/LoadProjects'
 import reportWebVitals from './reportWebVitals';
 
-var firebase = require("firebase/app");
-require("firebase/auth");
-require("firebase/firestore");
-  // Set the configuration for your app
-  // TODO: Replace with your project's config object
-var config = {
-    apiKey: "process.env.REACT_APP_FIREBASE_API_KEY",
-    authDomain: "process.env.REACT_APP_AUTH_DOMAIN",
-    databaseURL: "process.env.REACT_APP_DATABASE_URL",
-    storageBucket: "process.env.REACT_APP_STORAGE_BUCKET"
-};
 
-  firebase.initializeApp(config);
-
-  // Get a reference to the database service
-  //var database = firebase.database();
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoadProjects />
     <App />
     
   </React.StrictMode>,
