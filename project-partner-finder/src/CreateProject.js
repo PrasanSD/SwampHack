@@ -65,6 +65,7 @@ export default function CreateProject() {
   };
 
   const handleChange = (e) => {
+    console.log(json);
     setJSON({
       ...json,
       [e.target.name]: e.target.value,
