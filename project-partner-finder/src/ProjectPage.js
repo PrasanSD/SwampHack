@@ -1,14 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ProjectPage({ projects }) {
   return (
     <>
       <div className="container">
         <h1 class="display-3 mt-5">Projects</h1>
-
+        <Link as={Link} to="/createProject">
         <a type="button" class="btn btn-outline-secondary mt-3 mb-5">
           Start New Project +
         </a>
+        </Link>
+        
       </div>
 
       {projects.length > 0 &&

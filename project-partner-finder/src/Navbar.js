@@ -11,17 +11,14 @@ export default function NavbarComponent() {
           <Nav.Link as={Link} to="/">
             Home
           </Nav.Link>
-          <Nav.Link as={Link} to="/browse">
-            Browse
-          </Nav.Link>
           <Nav.Link as={Link} to="/projects">
-            Projects
+            My Projects
+          </Nav.Link>
+          <Nav.Link as={Link} to="/browse">
+            Browse Projects
           </Nav.Link>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
+        
         <Nav>
           <Nav.Link as={Link} to="/user">
             Profile
