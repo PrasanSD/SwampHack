@@ -6,13 +6,13 @@ export default function NavbarComponent() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand as={Link} to="/">
-          Logo
+        <Navbar.Brand>
+          LastHour
         </Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link to="/">Home</Nav.Link>
-          <Nav.Link to="/">Features</Nav.Link>
-          <Nav.Link to="/">About</Nav.Link>
+          <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/browse">Browse</Nav.Link>
+          <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
