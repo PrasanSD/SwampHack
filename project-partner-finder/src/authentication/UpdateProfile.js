@@ -63,7 +63,7 @@ export default function UpdateProfile() {
               <Form.Control
                 type="password"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Enter the new password"
               />
             </Form.Group>
             <Form.Group id="password-confirm">
@@ -71,7 +71,7 @@ export default function UpdateProfile() {
               <Form.Control
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Confirm the new password"
               />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
