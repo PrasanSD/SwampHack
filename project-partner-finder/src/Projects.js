@@ -1,19 +1,32 @@
 import React from "react";
-import Navbar from "../Navbar";
+import Navbar from "./Navbar";
 
-export default function Browse() {
-  
+export default function Projects() {
+  const projectjson = [{
+      "name": "Testproject",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus nibh eget eros suscipit, vitae imperdiet mauris ultrices. Vestibulum venenatis lorem at suscipit vestibulum.",
+      "maxLimit":"5",
+      "currentMembers":"4"
+  },
+  {
+    "name": "Another Test",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus nibh eget eros suscipit, vitae imperdiet mauris ultrices. Vestibulum venenatis lorem at suscipit vestibulum.",
+    "maxLimit":"10",
+    "currentMembers":"3"
+}]
+
   return (
     <>
       <Navbar />
       <div class="container">
-        <h1 class="display-3 mt-5">Browse Projects</h1>
-        <div class="col-4 mt-5 mb-4"><input type="text" class="form-control" placeholder="Search"/></div>
+        <h1 class="display-3 mt-5">Projects</h1>
+
+        <a type="button" class="btn btn-outline-secondary mt-3 mb-5">Start New Project +</a>
+
 
         <div class="card mt-3">
-            <div class="card-header d-flex flex-row">
-                <div class="badge bg-light mx-1">tag1</div>
-                <div class="badge bg-light mx-1">tag2</div>
+            <div class="card-header">
+                <span>Member Type(Owner/Member or Member)</span>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -28,8 +41,8 @@ export default function Browse() {
                 <a href="#" class="btn btn-primary mt-2">View Details</a>
             </div>
         </div>
-    </div> 
 
+    </div> 
     </>
   );
 }

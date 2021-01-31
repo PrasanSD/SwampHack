@@ -1,20 +1,19 @@
 import React from "react";
-import Navbar from "../Navbar";
+import Navbar from "./Navbar";
 
-export default function Projects() {
+export default function Browse() {
   
   return (
     <>
       <Navbar />
       <div class="container">
-        <h1 class="display-3 mt-5">Projects</h1>
-
-        <a type="button" class="btn btn-outline-secondary mt-3 mb-5">Start New Project +</a>
-
+        <h1 class="display-3 mt-5">Browse Projects</h1>
+        <div class="col-4 mt-5 mb-4"><input type="text" class="form-control" placeholder="Search"/></div>
 
         <div class="card mt-3">
-            <div class="card-header">
-                <span>Member Type(Owner/Member or Member)</span>
+            <div class="card-header d-flex flex-row">
+                <div class="badge bg-light mx-1">tag1</div>
+                <div class="badge bg-light mx-1">tag2</div>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -29,8 +28,8 @@ export default function Projects() {
                 <a href="#" class="btn btn-primary mt-2">View Details</a>
             </div>
         </div>
-
     </div> 
+
     </>
   );
 }
