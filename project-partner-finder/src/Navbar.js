@@ -19,7 +19,7 @@ export default function NavbarComponent() {
           </Nav.Link>
         </Nav>
         
-        <Nav>
+          <Nav>
           <Nav.Link as={Link} to="/user">
             Profile
           </Nav.Link>
