@@ -12,7 +12,7 @@ export default function ProjectPage({ projects }) {
       </div>
 
       {projects.length > 0 &&
-        projects.map((value, index) => (
+        projects.map((project, index) => (
           <div class="container">
             <div class="card mt-3">
               <div class="card-header">
@@ -21,16 +21,16 @@ export default function ProjectPage({ projects }) {
               <div class="card-body">
                 <div class="row">
                   <div class="col-8">
-                    <h5 class="card-title">{value.name}</h5>
+                    <h5 class="card-title">{project.name}</h5>
                   </div>
                   <div class="col-4 d-flex card-text justify-content-end">
-                    Members: <span>{value.currentMembers}</span>/
-                    <span>{value.maxLimit}</span>{" "}
+                    Members: <span>{project.currentMembers}</span>/
+                    <span>{project.maxLimit}</span>{" "}
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-8">
-                    <p class="card-text">{value.description}</p>
+                    <p class="card-text">{project.description}</p>
                   </div>
                 </div>
                 <a href="#" class="btn btn-primary mt-2">
