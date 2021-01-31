@@ -1,5 +1,6 @@
 import { Button, Dropdown } from "react-bootstrap";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AllProjects({ projects }) {
   return (
@@ -54,9 +55,9 @@ export default function AllProjects({ projects }) {
                     <p class="card-text">{project.description}</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary mt-2">
+                <Link to="/viewDetails" class="btn btn-primary mt-2">
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           ))}

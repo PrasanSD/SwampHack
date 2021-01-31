@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import ProjectPage from "./ProjectPage";
 
 export default function Projects() {
+  const LOCALSTORAGE_KEY = "projectJSON";
+  const [json, setJSON] = useState();
+
+  const loadJson = () => {
+    const json =
+      localStorage.getItem(LOCALSTORAGE_KEY) || JSON.stringify(json, null, 2);
+    setJSON(json);
+    console.log(json);
+  };
+
+  useEffect(() => {
+    loadJson();
+  }, []);
+
   const projectjson = [
     {
       name: "Testproject",

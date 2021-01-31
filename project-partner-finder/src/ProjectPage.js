@@ -7,11 +7,10 @@ export default function ProjectPage({ projects }) {
       <div className="container">
         <h1 class="display-3 mt-5">Projects</h1>
         <Link as={Link} to="/createProject">
-        <a type="button" class="btn btn-outline-secondary mt-3 mb-5">
-          Start New Project +
-        </a>
+          <a type="button" class="btn btn-outline-secondary mt-3 mb-5">
+            Start New Project +
+          </a>
         </Link>
-        
       </div>
 
       {projects.length > 0 &&
@@ -36,9 +35,9 @@ export default function ProjectPage({ projects }) {
                     <p class="card-text">{project.description}</p>
                   </div>
                 </div>
-                <a href="#" class="btn btn-primary mt-2">
+                <Link to="/viewDetails" class="btn btn-primary mt-2">
                   View Details
-                </a>
+                </Link>
               </div>
             </div>
           </div>

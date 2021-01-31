@@ -3,6 +3,7 @@ import AllProjects from "./AllProjects";
 import Navbar from "./Navbar";
 
 export default function Browse() {
+  // const LOCALSTORAGE_KEY = "projectJSON";
   const projectjson = [
     {
       name: "Testproject",

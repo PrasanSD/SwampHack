@@ -1,14 +1,30 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Navbar from "./Navbar";
 import { Multiselect } from "multiselect-react-dropdown";
 
 export default function CreateProject() {
+  const history = useHistory();
+  const LOCALSTORAGE_KEY = "projectJSON";
+
   const defaultJSON = {
     name: "",
     description: "",
     tags: [],
     repo: "",
   };
+
+  useEffect(() => {
+    if (json == undefined || json == null) {
+      setJSON(defaultJSON);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   let newJSON = setJSON([json]);
+  //   localStorage.setItem("projectJSON", JSON.stringify(newJSON));
+  //   setJSON(newJSON);
+  // }, [json]);
 
   const tagsOptions = [
     {
@@ -89,7 +105,7 @@ export default function CreateProject() {
   const createList = () => {
     try {
       var data = json;
-      console.log(data);
+      saveJSON(data);
     } catch (err) {
       console.log(err);
     }
@@ -111,6 +127,13 @@ export default function CreateProject() {
     }
 
     return err;
+  };
+
+  const saveJSON = (json) => {
+    let newJSON = setJSON([json]);
+    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(newJSON));
+    setJSON(newJSON);
+    history.push("/");
   };
 
   return (
